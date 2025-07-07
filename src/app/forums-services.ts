@@ -24,7 +24,13 @@ export class ForumsServices {
   }
 
   addForum(forum: forumPost): Observable<forumPost> {
-    return this.httpVariable.post<forumPost>(`${this.apiUrl}`,forum, {
+    return this.httpVariable.post<forumPost>(`${this.apiUrl}`, forum, {
+      headers: this.jsonHeaders
+    })
+  }
+
+  updateForum(forum: forumPost): Observable<forumPost> {
+    return this.httpVariable.put<forumPost>(`${this.apiUrl}`, forum, {
       headers: this.jsonHeaders
     })
   }
