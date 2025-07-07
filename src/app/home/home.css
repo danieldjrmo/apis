@@ -1,0 +1,19 @@
+.formulario label {
+  display: block;        
+  margin-bottom: 0.5rem; 
+  margin-left:  120px;
+}
+
+.formulario input {
+  display: block;        
+  margin-top: 0.25rem;   
+  width: 300px;           
+  box-sizing: border-box;
+}
+
+.formulario button {
+  display: block;        
+  margin-top: 1rem;      
+  padding: 0.5rem 1rem;
+   margin-left:  120px;
+}
