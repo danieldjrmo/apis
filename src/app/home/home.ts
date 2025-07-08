@@ -16,11 +16,13 @@ export class Home implements OnInit {
 
   constructor(private forumService: ForumsServices, private cdr: ChangeDetectorRef) { }
 
+  editIndex: number | null = null;
+  editedForum: forumPost | null = null;
+
   ngOnInit(): void {
 
     this.forumService.getForums().subscribe(data => {
       this.forums = data;
-      console.log('forums loaded:', data)
       this.cdr.detectChanges();
     })
   }
@@ -43,6 +45,18 @@ export class Home implements OnInit {
       this.cdr.detectChanges();
       console.log('new add forum' + newForum);
     })
+  }
+
+  editForum(id: number) {
+    this.editIndex = id;
+
+    const original = this.forums.find(f => f.id === id);
+    this.editedForum = original ? { ...original } : null;
+    console.log(id)
+  }
+
+  cancelarEdit() {
+    this.editIndex = null;
   }
 
 }

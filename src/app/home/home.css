@@ -17,3 +17,40 @@
   padding: 0.5rem 1rem;
    margin-left:  120px;
 }
+
+li{
+  background-color: rgba(0,0,0,0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 900px;
+  border-radius: 10px;
+ 
+}
+
+.forum-actions button{
+  padding: 10px;
+  background-color: azure;
+  border-radius: 10px;
+  border: none;
+  margin-left: 8px;
+}
+
+.forum-actions {
+  margin-top: 8px;
+}
+
+.inputEdit input{
+  width: 400px;
+  height: 20px;
+}
+
+#btnEliminar{
+  background-color:lightsalmon;
+  color: white;
+  font-weight: 600;
+}
+
+#btnCancelar{
+  background-color:blanchedalmond;
+  font-weight: 600;
+}
